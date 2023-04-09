@@ -6,10 +6,7 @@ import colorama
 from colorama import init, Fore, Back
 init()
 
-try:
-    os.system('cls')
-except:
-    os.system('clear')
+os.system('clear')
 
 n0 = ('Евгений', 'Елена', 'Екатерина', 'Наталья', 'Светлана' 'Олег' 'Егор', 'Дмитрий')
 nnf0 = ('Евгений Петрович', 'Евгений Алексеевич', 'Александра Эдуардовна', 'Наталья Андреевна', 'Дмитрий Олегович')
