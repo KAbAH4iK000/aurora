@@ -93,7 +93,7 @@ try:
             print(Fore.CYAN + """https://kursk.mtsru.ru
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~10 минут
+                print(Fore.GREEN + """Успешно, ~15 минут
                                 """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -112,7 +112,7 @@ try:
             print(Fore.CYAN + """https://https://kursk.domconnect.ru
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~30 минут
+                print(Fore.GREEN + """Успешно, ~2 минуты
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -135,7 +135,7 @@ try:
             print(Fore.CYAN + """https://kursk-rt.ru
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~10 минут
+                print(Fore.GREEN + """Успешно, ~30 минут
                                     """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -162,7 +162,7 @@ try:
             print(Fore.CYAN + """https://kursk.telekom-internet.ru
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~10 минут
+                print(Fore.GREEN + """Успешно, ~15 минут
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -227,7 +227,7 @@ try:
             print(Fore.CYAN + """https://domru-pro.ru
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~2 минут
+                print(Fore.GREEN + """Успешно, ~15 минут
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
