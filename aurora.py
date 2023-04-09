@@ -112,7 +112,7 @@ try:
             print(Fore.CYAN + """https://https://kursk.domconnect.ru
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~10 минут
+                print(Fore.GREEN + """Успешно, ~30 минут
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -183,7 +183,7 @@ try:
             print(Fore.CYAN + """https://kursk.tvoi-provider.ru:
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~10 минут
+                print(Fore.GREEN + """Успешно, ~15 минут
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -227,7 +227,7 @@ try:
             print(Fore.CYAN + """https://domru-pro.ru
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~10 минут
+                print(Fore.GREEN + """Успешно, ~2 минут
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -257,7 +257,7 @@ try:
             print(Fore.CYAN + """https://kursk.internetv-dom.ru
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~10 минут
+                print(Fore.GREEN + """Успешно, ~15 минут
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -291,7 +291,7 @@ try:
             print(Fore.CYAN + """https://dom.ru.com/kursk/
             Запрос отправлен...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~10 минут
+                print(Fore.GREEN + """Успешно, ~15 минут
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -326,7 +326,7 @@ try:
             print(Fore.CYAN + """https://tarify-dom.ru
             Запрос отправлен...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~10 минут
+                print(Fore.GREEN + """Успешно, ~15 минут
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
