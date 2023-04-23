@@ -43,7 +43,7 @@ banner = """
 |MTS,ROSTELECOM,DOM. AURORA OSTELECOM,DOM.RU,M И ROST|            |    |
 |ELECOM,DOM.RU,MTS,ROSTELECOM,DOM.RU,MTS,ROSTE Ш OM,D|         0123456789
 |MTS,ROSTE?                              .RU,M А ROST|         0123456789
-|ELECOM,DO! СПЕЦИАЛЬНО ДЛЯ РЫЖЕГО УЕБКА  'OSTE К OM,D|         0123456789
+|ELECOM,DO!         для химички          'OSTE К OM,D|         0123456789
 |MTS,ROSTE                               .RU,MTS,ROST|           | -|
 |ELECOM,DOM.RU,MTS,ROSTELECOM,DOM.RU,MTS,ROSTELECOM,D|         0123456789
 |MTS, ТВАРЪ COM,DOM.RU,MTS,ROSTELECOM,DOM.RU,MTS,ROST|         0123456789
