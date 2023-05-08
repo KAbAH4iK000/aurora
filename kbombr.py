@@ -54,12 +54,11 @@ banner0 = """
 print(Fore.LIGHTYELLOW_EX + hello)
 print(Fore.LIGHTGREEN_EX + banner0)
 print(Fore.LIGHTRED_EX + random.choice(ph))
-f = open('blog.txt', 'r')
-print(f'Последний аферист:\n{f.read()}')
-a = os.path.exists('blog.txt')
-if a == False:
+try:
+    f = open('blog.txt', 'r')
+    print(f'Последний аферист:\n{f.read()}')
+except:
     f = open('blog.txt', 'w')
-    f.close()
 try:
     chs = input(Fore.CYAN + '''Инфо - 1
     Удалить файл логов - 2
